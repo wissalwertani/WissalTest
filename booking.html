@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Planet Scribbles</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="booking.html">Event Booking</a>
+    </nav>
+  </header>
+
+  <section class="hero small">
+    <h1>Book Your Event</h1>
+    <p>Workshops, training sessions, and meetups tailored for you.</p>
+  </section>
+
+  <main>
+    <form id="booking-form" class="form-card">
+      <label>Name: <input type="text" required></label>
+      <label>Email: <input type="email" required></label>
+      <label>Event:
+        <select required>
+          <option value="Workshop">Workshop</option>
+          <option value="Training">Training</option>
+          <option value="Meetup">Meetup</option>
+        </select>
+      </label>
+      <label>Date: <input type="date" required></label>
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+    <p id="confirmation" class="confirmation"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Planet Scribbles | Made with ❤️ for test submission</p>
+  </footer>
+
+  <script>
+    document.getElementById("booking-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("confirmation").innerText = "✅ Booking confirmed! We will contact you soon.";
+    });
+  </script>
+</body>
+</html>
